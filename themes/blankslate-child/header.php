@@ -14,10 +14,11 @@
         </div>
         <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement"> 
             <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'primary mobile', 'menu_class' => 'menu-mobile' ) ); ?>
             
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
-            </a>
+            </a> -->
             
         </nav>
     </header>
