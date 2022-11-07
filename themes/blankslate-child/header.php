@@ -14,6 +14,11 @@
         </div>
         <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement"> 
             <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            
         </nav>
     </header>
 <div id="container">
