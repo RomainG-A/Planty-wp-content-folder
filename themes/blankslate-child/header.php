@@ -13,13 +13,10 @@
             <a href="https://planty.local"><img src="http://planty.local/wp-content/uploads/2022/10/Logo.png" alt="Logo de Planty" /></a>
         </div>
         <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement"> 
-            <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
-            <?php wp_nav_menu( array( 'theme_location' => 'primary mobile', 'menu_class' => 'menu-mobile' ) ); ?>
-            
-            <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a> -->
-            
+            <?php
+            wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) );
+            wp_nav_menu( array( 'theme_location' => 'primary mobile', 'menu_class' => 'menu-mobile' ) );
+            ?>
         </nav>
     </header>
 <div id="container">

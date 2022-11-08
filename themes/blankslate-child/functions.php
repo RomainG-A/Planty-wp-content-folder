@@ -23,7 +23,9 @@ add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
 
 // END ENQUEUE PARENT ACTION
 
-function extra_setup() {
-    register_nav_menu ('primary mobile', __( 'Navigation Mobile', 'twentythirteen' ));
+function add_admin_link( $items, $args ) {
+    if (is_user_logged_in() && $args->theme_location == 'wp_nav_menu') {
+        $items .= '<li><a href="'. get_admin_url() .'">Admin</a></li>';
+    }
+    return $items;
 }
-add_action( 'after_setup_theme', 'extra_setup' );
