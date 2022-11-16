@@ -19,5 +19,5 @@
             ?>
         </nav>
     </header>
-<div id="container">
-<main id="content" role="main">
+    <div id="container">
+        <main id="content" role="main">

@@ -1,4 +1,5 @@
 <?php
+
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
@@ -23,9 +24,10 @@ add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
 
 // END ENQUEUE PARENT ACTION
 
-function add_admin_link( $items, $args ) {
-    if (is_user_logged_in() && $args->theme_location == 'wp_nav_menu') {
-        $items .= '<li><a href="'. get_admin_url() .'">Admin</a></li>';
+function add_admin_link($items, $args) {
+    if (is_user_logged_in() && ($args->theme_location=='main-menu' || $args->theme_location=='primary mobile')) {
+        $items .= '<li id="ongletAdmin" class="menuWhite"><a href="'. get_admin_url() .'">Admin</a></li>';
     }
     return $items;
 }
+add_filter( 'wp_nav_menu_items', 'add_admin_link', 10, 2 );
